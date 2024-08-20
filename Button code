@@ -1,0 +1,50 @@
+btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if (validateEditText()){
+                   StdntNum = edtStdntNum.getText().toString();
+                   Name = edtName.getText().toString();
+                   SName = edtSurname.getText().toString();
+                   PhoneNumber = edtPhoneNumber.getText().toString();
+               }
+               else Toast.makeText(this, "Please fill all fields", ).show();
+            }
+        });
+
+        btnModify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (edtStdntNum.getText().toString().isEmpty() == false)
+                {
+                    if (edtName.getText().toString().isEmpty() == false)
+                    {
+                        Name = edtName.getText().toString();
+                    }
+                    else if (edtSurname.getText().toString().isEmpty() == false)
+                    {
+                        SName = edtSurname.getText().toString();
+                    }
+                    else if (edtPhoneNumber.getText().toString().isEmpty() == false)
+                    {
+                        PhoneNumber = edtPhoneNumber.getText().toString();
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+                else {
+                    Toast.makeText(this, "Please Enter a student number to modify information", ).show();
+                }
+
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
